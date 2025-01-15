@@ -4,8 +4,9 @@ class Wmip < Formula
   url "https://github.com/tolgayakar/wmip/archive/refs/tags/v0.0.1.tar.gz"
   sha256 "3fd3ba770ea09117368b79295bf55d53e5fd90bdb86ebf71403447452599078d"
   license "MIT"
-
+  
   depends_on :macos
+  depends_on "go" => :build
 
   def install
     system "make", "build"
