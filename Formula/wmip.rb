@@ -9,8 +9,7 @@ class Wmip < Formula
   depends_on "go" => :build
 
   def install
-    system "make", "build"
-    bin.install "wmip"
+    system "go", "build", "-o", bin/"wmip", "./cmd/main.go"
   end
 
   test do
